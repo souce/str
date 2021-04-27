@@ -1,3 +1,20 @@
+/*
+ * 
+ * Copyright (c) 2021, Joel
+ *
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -234,9 +251,9 @@ int str_trim(str *s, const char *cset){
  */
 int str_catprintf(str *s, const char *fmt, ...){
     va_list ap;
-	va_start(ap, fmt);
-	int res = STR_SAFE(sdscatvprintf, *s, fmt, ap);
-	va_end(ap);
+    va_start(ap, fmt);
+    int res = STR_SAFE(sdscatvprintf, *s, fmt, ap);
+    va_end(ap);
     return res;
 }
 
